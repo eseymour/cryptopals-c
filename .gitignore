@@ -1,2 +1,8 @@
+# Ignore all object files
 *.o
-bin/
+
+# Ignore exe for Windows
+*.exe
+
+# Ignore excecutables
+/01-hex2base64/hex2base64
