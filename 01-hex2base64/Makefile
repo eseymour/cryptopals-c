@@ -3,9 +3,10 @@ CFLAGS = -O2 -g -std=c99 -Wall -Wextra -Werror -pedantic
 .PHONY: all
 all: hex2base64
 
-hex2base64: hex2base64.o
+hex2base64: hex2base64.o encoding.o
 
-hex2base64.o: hex2base64.c
+hex2base64.o: hex2base64.c encoding.h
+encoding.o: encoding.c encoding.h
 
 .PHONY: clean
 clean:
