@@ -1,3 +1,12 @@
-int main(int argc, int argv) {
-  return 0;
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(int argc, char **argv) {
+  if (argc == 1) {
+    fprintf(stderr, "usage: %s hex_string\n", strrchr(argv[0], '/') + 1);
+    return EXIT_FAILURE;
+  }
+
+  return EXIT_SUCCESS;
 }
