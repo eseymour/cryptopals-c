@@ -1,3 +1,5 @@
+CFLAGS = -O2 -g -std=c99 -Wall -Wextra -Werror -pedantic
+
 .PHONY: all
 all: hex2base64
 
