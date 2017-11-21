@@ -7,3 +7,6 @@
 # Ignore excecutables
 /01-hex2base64/hex2base64
 /02-fixedxor/fixedxor
+
+# Ignore *.dSYM directories on macOS
+*.dSYM
