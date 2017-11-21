@@ -15,4 +15,4 @@ check: hex2base64
 
 .PHONY: clean
 clean:
-	rm -f hex2base64 hex2base64.exe *.o
+	rm -rf hex2base64 hex2base64.exe hex2base64.dSYM *.o
