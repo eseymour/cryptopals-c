@@ -3,7 +3,7 @@
 #include <string.h>
 
 #include <basecodec/basecodec.h>
-#include <crypto/crypto.h>
+#include <crypto/cipher.h>
 
 int main(int argc, char **argv) {
   if (argc != 3) {
