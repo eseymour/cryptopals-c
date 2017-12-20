@@ -13,7 +13,7 @@ ByteString * decodeHex(char *encodedString) {
   rawBytes->length = numBytes;
 
   for (size_t i = 0; i < numBytes; ++i) {
-    byte_t curByte = hex2nibble(encodedString[i*2]) << 4;
+    uint8_t curByte = hex2nibble(encodedString[i*2]) << 4;
     curByte |= hex2nibble(encodedString[i*2 + 1]);
 
     rawBytes->bytes[i] = curByte;

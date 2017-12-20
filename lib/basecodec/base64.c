@@ -13,7 +13,7 @@ char * encodeBase64(ByteString *rawBytes) {
   encodedString[stringLen] = '\0';
 
   for (size_t i = 0; i < rawBytes->length / 3; i++) {
-    byte_t curIndex = rawBytes->bytes[i*3] >> 2;
+    uint8_t curIndex = rawBytes->bytes[i*3] >> 2;
     encodedString[i*4] = base64chars[curIndex];
 
     curIndex = (rawBytes->bytes[i*3] << 4) & 0x30;
