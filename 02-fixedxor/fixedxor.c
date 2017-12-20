@@ -3,8 +3,7 @@
 #include <string.h>
 
 #include <basecodec/basecodec.h>
-
-ByteString * fixedXorEncode(ByteString *rawMessage, ByteString *rawKey);
+#include <crypto/crypto.h>
 
 int main(int argc, char **argv) {
   if (argc != 3) {
@@ -17,30 +16,17 @@ int main(int argc, char **argv) {
     return EXIT_FAILURE;
   }
 
-  ByteString *rawMessage = decodeHex(argv[1]);
-  ByteString *rawKey = decodeHex(argv[2]);
-  ByteString *rawEncodedMessage = fixedXorEncode(rawMessage, rawKey);
+  ByteString *message = decodeHex(argv[1]);
+  ByteString *key = decodeHex(argv[2]);
 
-  char *encodedMessage = encodeHex(rawEncodedMessage);
+  fixedXorCipher(message->bytes, key->bytes, message->bytes, message->length);
+
+  char *encodedMessage = encodeHex(message);
   printf("%s\n", encodedMessage);
 
-  free(rawMessage);
-  free(rawKey);
-  free(rawEncodedMessage);
+  free(message);
+  free(key);
   free(encodedMessage);
 
   return EXIT_SUCCESS;
-}
-
-ByteString * fixedXorEncode(ByteString *rawMessage, ByteString *rawKey) {
-  size_t messageLen = rawMessage->length;
-
-  ByteString *encodedMessage = (ByteString *) malloc(sizeof(ByteString) + messageLen);
-  encodedMessage->length = messageLen;
-
-  for (size_t i = 0; i < messageLen; ++i) {
-    encodedMessage->bytes[i] = rawMessage->bytes[i] ^ rawKey->bytes[i];
-  }
-
-  return encodedMessage;
 }
