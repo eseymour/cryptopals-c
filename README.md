@@ -1,5 +1,17 @@
 # Cryptopals Crypto Challenges
 
+This repository contains programs written in C to solve the [Crytopals Crypto
+Challenges](https://cryptopals.com).
+
+## Building
+
+This project uses the [tup](http://gittup.org/tup) build system. Once installed,
+building the project is as simple as running:
+
+```shell
+$ tup
+```
+
 ## Progress
 
 ### Set 1
