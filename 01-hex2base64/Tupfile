@@ -1,4 +1,6 @@
 include_rules
+CFLAGS += -I../lib
+LDLIBS += ../lib/cryptopals/libcryptopals.a
 
 : foreach *.c |> !cc |>
-: *.o |> gcc $(CFLAGS) %f -o %o |> hex2base64
+: *.o |> !ld |> hex2base64

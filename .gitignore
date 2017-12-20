@@ -1,6 +1,9 @@
 # Ignore all object files
 *.o
 
+# Ignore static libraries
+*.a
+
 # Ignore exe for Windows
 *.exe
 

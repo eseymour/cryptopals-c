@@ -1,5 +1,11 @@
-CFLAGS += -O2 -g
+COMMON += -O2 -flto -g
+
+CFLAGS += $(COMMON)
 CFLAGS += -std=c11
 CFLAGS += -Wall -Wextra -Werror -pedantic
 
+LDFLAGS += $(COMMON)
+
 !cc = |> gcc $(CFLAGS) -c %f -o %o |> %B.o
+!ld = | $(LDLIBS) |> gcc $(LDFLAGS) %f $(LDLIBS) -o %o |>
+!ar = |> ar crs %o %f |>

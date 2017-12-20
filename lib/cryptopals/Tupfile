@@ -1,4 +1,4 @@
 include_rules
 
 : foreach *.c |> !cc |>
-: *.o |> !ld |> fixedxor
+: *.o |> !ar |> libcryptopals.a
