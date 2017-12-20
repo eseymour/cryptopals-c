@@ -27,6 +27,7 @@ const char *hexChars = "0123456789abcdef";
 char * encodeHex(ByteString *rawBytes) {
   size_t stringLen = rawBytes->length * 2;
   char *encodedString = (char *) malloc(stringLen + 1);
+  encodedString[stringLen] = '\0';
 
   for (size_t i = 0; i < rawBytes->length; i++) {
     uint8_t nibble = rawBytes->bytes[i] >> 4;
