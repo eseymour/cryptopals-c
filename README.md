@@ -16,16 +16,16 @@ $ tup
 
 ### Set 1
 
-| #   | Challenge                        | Completed   |
-| --- | -------------------------------- | ----------- |
-| 1   | [Convert hex to base64][1]       | Oct, 9 2017 |
-| 2   | [Fixed XOR][2]                   | WIP         |
-| 3   | [Single-byte XOR cipher][3]      |             |
-| 4   | [Detect single-character XOR][4] |             |
-| 5   | [Implement repeating-key XOR][5] |             |
-| 6   | [Break repeating-key XOR][6]     |             |
-| 7   | [AES in ECB mode][7]             |             |
-| 8   | [Detect AES in ECB mode][8]      |             |
+| #   | Challenge                        | Completed        |
+| --- | -------------------------------- | ---------------- |
+| 1   | [Convert hex to base64][1]       | October 9, 2017  |
+| 2   | [Fixed XOR][2]                   | Work in Progress |
+| 3   | [Single-byte XOR cipher][3]      |                  |
+| 4   | [Detect single-character XOR][4] |                  |
+| 5   | [Implement repeating-key XOR][5] |                  |
+| 6   | [Break repeating-key XOR][6]     |                  |
+| 7   | [AES in ECB mode][7]             |                  |
+| 8   | [Detect AES in ECB mode][8]      |                  |
 
 [1]: https://cryptopals.com/sets/1/challenges/1
 [2]: https://cryptopals.com/sets/1/challenges/2
