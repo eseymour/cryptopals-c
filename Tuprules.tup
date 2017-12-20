@@ -1,5 +1,5 @@
 CFLAGS += -O2 -g
-CFLAGS += -std=c99
+CFLAGS += -std=c11
 CFLAGS += -Wall -Wextra -Werror -pedantic
 
 !cc = |> gcc $(CFLAGS) -c %f -o %o |> %B.o
