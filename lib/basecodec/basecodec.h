@@ -4,11 +4,9 @@
 #include <stddef.h>
 #include <stdint.h>
 
-typedef uint8_t byte_t;
-
 typedef struct {
   size_t length;
-  byte_t bytes[];
+  uint8_t bytes[];
 } ByteString;
 
 ByteString * decodeHex(char *encodedString);
