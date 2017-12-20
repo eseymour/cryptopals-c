@@ -6,10 +6,11 @@ Challenges](https://cryptopals.com).
 ## Building
 
 This project uses the [tup](http://gittup.org/tup) build system. Once installed,
-building the project is as simple as running:
+building the project is as simple as running the following command in your
+shell:
 
 ```shell
-$ tup
+tup
 ```
 
 ## Progress
