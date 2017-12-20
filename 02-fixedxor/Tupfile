@@ -1,4 +1,4 @@
 include_rules
 
-: foreach *.c |> !cc |> %B.o
+: foreach *.c |> !cc |>
 : *.o |> gcc $(CFLAGS) %f -o %o |> fixedxor
