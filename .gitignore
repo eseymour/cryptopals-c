@@ -10,3 +10,6 @@
 
 # Ignore *.dSYM directories on macOS
 *.dSYM
+
+# Ignore .tup directory
+.tup/
