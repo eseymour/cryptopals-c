@@ -16,3 +16,6 @@
 
 # Ignore .tup directory
 .tup/
+
+# Ignore local .vscode directory
+.vscode/
