@@ -1,4 +1,4 @@
-#include "encoding.h"
+#include "basecodec.h"
 
 #include <ctype.h>
 #include <stdlib.h>

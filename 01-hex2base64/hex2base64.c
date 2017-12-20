@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include <cryptopals/encoding.h>
+#include <basecodec/basecodec.h>
 
 int main(int argc, char **argv) {
   if (argc == 1) {
