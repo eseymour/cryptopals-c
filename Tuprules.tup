@@ -1,3 +1,5 @@
+.gitignore
+
 COMMON += -O2 -flto -g
 
 CFLAGS += $(COMMON)
