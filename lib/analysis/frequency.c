@@ -14,7 +14,7 @@ size_t calculateLetterDist(const char *str, double dist[static 26]) {
     }
   }
 
-  if (count != 0) {
+  if (count > 0) {
     for (int i = 0; i < 26; ++i) {
       dist[i] = letterFreqs[i] / (double) count;
     }
@@ -23,13 +23,13 @@ size_t calculateLetterDist(const char *str, double dist[static 26]) {
   return count;
 }
 
-double calculateChiSquared(const double *expected, const double *actual, size_t distSize) {
-  double chiSquared = 0;
+double chiSquared(const double *expected, const double *actual, size_t distSize) {
+  double chi2 = 0;
 
   for (size_t i = 0; i < distSize; i++) {
     double difference = actual[i] - expected[i];
-    chiSquared += difference * difference / expected[i];
+    chi2 += difference * difference / expected[i];
   }
 
-  return chiSquared;
+  return chi2;
 }
