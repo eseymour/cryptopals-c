@@ -13,6 +13,13 @@ shell:
 tup
 ```
 
+A makefile is also provided for tasks that tup cannot accomplish. The project
+can also be built through make which just wraps tup:
+
+```shell
+make
+```
+
 ## Progress
 
 ### Set 1
