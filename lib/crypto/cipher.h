@@ -1,5 +1,5 @@
-#ifndef CRYPTO_H
-#define CRYPTO_H
+#ifndef CRYPTO_CIPHER_H
+#define CRYPTO_CIPHER_H
 
 #include <stddef.h>
 #include <stdint.h>
@@ -26,4 +26,4 @@ void singleByteXorCipher(
   size_t messageSize
 );
 
-#endif // CRYPTO_H
+#endif // CRYPTO_CIPHER_H
