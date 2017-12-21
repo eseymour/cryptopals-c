@@ -13,3 +13,8 @@ check:
 .PHONY: lint
 lint:
 	cppcheck -q --enable=all --suppress=missingIncludeSystem --inconclusive -Ilib .
+
+.PHONY: docs
+docs:
+	rm -rf doc
+	doxygen Doxyfile

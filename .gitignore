@@ -3,3 +3,6 @@
 
 # Ignore local .vscode directory
 .vscode/
+
+# Ignore generated documentation
+doc/
