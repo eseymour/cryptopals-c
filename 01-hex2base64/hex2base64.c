@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include <basecodec/basecodec.h>
+#include <basecodec/base64codec.h>
+#include <basecodec/hexcodec.h>
 
 int main(int argc, char **argv) {
   if (argc == 1) {

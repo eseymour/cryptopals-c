@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include <basecodec/basecodec.h>
+#include <basecodec/hexcodec.h>
 #include <crypto/cipher.h>
 
 int main(int argc, char **argv) {
