@@ -1,9 +1,5 @@
 .PHONY: all
-all: build check
-
-# Using the tup build system
-.PHONY: build
-build:
+all:
 	tup
 
 # Currently using simple shell scripts for testing
