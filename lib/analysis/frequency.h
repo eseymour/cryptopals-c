@@ -5,7 +5,7 @@
 
 extern const double englishLetterDist[26];
 
-size_t calculateLetterDist(const char *str, double dist[static 26]);
-double chiSquared(const double *expected, const double *actual, size_t distSize);
+size_t calculateLetterFreqs(const char *str, size_t freqs[static 26]);
+double chiSquared(const double *expected, const size_t *actual, size_t distSize);
 
 #endif // ANALYSIS_FREQUENCY_H

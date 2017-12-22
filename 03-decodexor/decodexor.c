@@ -19,21 +19,22 @@ int main(int argc, char **argv) {
 
   // Try all possible 1 byte keys. Smallest chi-squared is likely the key.
   uint8_t bestKey = 0;
-  float bestChi2 = INFINITY;
+  float bestScore = INFINITY;
   for (uint16_t key = 0; key <= 0xff; ++key) {
     singleByteXorCipher(ciphertext->bytes, key, (uint8_t *) message, ciphertext->length);
     message[ciphertext->length] = '\0';
 
-    double actualDist[26];
-    size_t count = calculateLetterDist(message, actualDist);
+    size_t actualDist[26];
+    size_t count = calculateLetterFreqs(message, actualDist);
 
     // If letters found, we can skip this key.
     if (count > 0) {
       // See if this key is closer to the expected distribution.
-      double chi2 = chiSquared(englishLetterDist, actualDist, 26);
-      if (chi2 < bestChi2) {
+      double score = chiSquared(englishLetterDist, actualDist, 26);
+      score = (score * ciphertext->length) / count;
+      if (score < bestScore) {
         bestKey = key;
-        bestChi2 = chi2;
+        bestScore = score;
       }
     }
   }
