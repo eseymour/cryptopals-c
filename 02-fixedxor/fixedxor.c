@@ -3,7 +3,7 @@
 #include <string.h>
 
 #include <basecodec/hexcodec.h>
-#include <crypto/cipher.h>
+#include <crypto/xorcrypt.h>
 
 int main(int argc, char **argv) {
   if (argc != 3) {
@@ -19,7 +19,7 @@ int main(int argc, char **argv) {
   ByteString *message = decodeHex(argv[1]);
   ByteString *key = decodeHex(argv[2]);
 
-  fixedXorCipher(message->bytes, key->bytes, message->bytes, message->length);
+  fixedXorcrypt(message->bytes, key->bytes, message->bytes, message->length);
 
   char *encodedMessage = encodeHex(message);
   printf("%s\n", encodedMessage);

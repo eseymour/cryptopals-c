@@ -5,7 +5,7 @@
 
 #include <analysis/frequency.h>
 #include <basecodec/hexcodec.h>
-#include <crypto/cipher.h>
+#include <crypto/xorcrypt.h>
 
 int main(int argc, char **argv) {
   if (argc != 2) {
@@ -21,7 +21,7 @@ int main(int argc, char **argv) {
   uint8_t bestKey = 0;
   float bestScore = INFINITY;
   for (uint16_t key = 0; key <= 0xff; ++key) {
-    singleByteXorCipher(ciphertext->bytes, key, (uint8_t *) message, ciphertext->length);
+    singleByteXorcrypt(ciphertext->bytes, key, (uint8_t *) message, ciphertext->length);
     message[ciphertext->length] = '\0';
 
     size_t actualDist[26];
@@ -40,7 +40,7 @@ int main(int argc, char **argv) {
   }
 
   // Decode the best key
-  singleByteXorCipher(ciphertext->bytes, bestKey, (uint8_t *) message, ciphertext->length);
+  singleByteXorcrypt(ciphertext->bytes, bestKey, (uint8_t *) message, ciphertext->length);
   message[ciphertext->length] = '\0';
 
   // Print out the fruits of our labor

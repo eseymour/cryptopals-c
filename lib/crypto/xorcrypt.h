@@ -4,22 +4,22 @@
 #include <stddef.h>
 #include <stdint.h>
 
-void repeatingKeyXorCipher(
+void xorcrypt(
   uint8_t *message,
   uint8_t *key,
-  uint8_t *cipherText,
+  uint8_t *ciphertext,
   size_t messageSize,
   size_t keySize
 );
 
-void fixedXorCipher(
+void fixedXorcrypt(
   uint8_t *message,
   uint8_t *key,
   uint8_t *ciphertext,
   size_t messageSize
 );
 
-void singleByteXorCipher(
+void singleByteXorcrypt(
   uint8_t *message,
   uint8_t key,
   uint8_t *ciphertext,
