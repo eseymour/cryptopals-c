@@ -1,0 +1,7 @@
+include_rules
+CFLAGS += -I../lib
+LDLIBS += ../lib/basecodec/libbasecodec.a
+LDLIBS += ../lib/crypto/libcrypto.a
+
+:foreach *.c |> !cc |>
+: *.o |> !ld |> xorcrypt
