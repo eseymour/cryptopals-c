@@ -30,7 +30,7 @@ make
 | 2   | [Fixed XOR][2]                   | December 19, 2017 |
 | 3   | [Single-byte XOR cipher][3]      | December 20, 2017 |
 | 4   | [Detect single-character XOR][4] | Work in Progress  |
-| 5   | [Implement repeating-key XOR][5] |                   |
+| 5   | [Implement repeating-key XOR][5] | December 23, 2017 |
 | 6   | [Break repeating-key XOR][6]     |                   |
 | 7   | [AES in ECB mode][7]             |                   |
 | 8   | [Detect AES in ECB mode][8]      |                   |
