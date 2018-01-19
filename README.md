@@ -1,9 +1,14 @@
-# Cryptopals Crypto Challenges
+# cryptopals-c
 
+This repository is archived for reference. I have decided to solve the
+challenges in Go at the [eseymour/cryptopals](https://github.com/eseymour/cryptopals)
+GitHub repository. The original readme follows.
+
+## Cryptopals Crypto Challenges
 This repository contains programs written in C to solve the [Crytopals Crypto
 Challenges](https://cryptopals.com).
 
-## Building
+### Building
 
 This project uses the [tup](http://gittup.org/tup) build system. Once installed,
 building the project is as simple as running the following command in your
@@ -20,9 +25,9 @@ can also be built through make which just wraps tup:
 make
 ```
 
-## Progress
+### Progress
 
-### Set 1
+#### Set 1
 
 | #   | Challenge                        | Completed         |
 | --- | -------------------------------- | ----------------- |
